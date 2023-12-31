@@ -117,14 +117,15 @@ main:has(.carousel-btn:hover) .carousel-1 {
 
 nav {
   display: flex;
-  box-shadow: 0rem 0.5rem 1rem -0.5rem hsl(var(--clr-gray-600) / 0.5);
-  padding: 1rem 1.5rem;
-  gap: 1rem;
   align-items: center;
+  gap: 1rem;
+  padding: 0rem 1.5rem;
+  box-shadow: 0rem 0.5rem 1rem -0.5rem hsl(var(--clr-gray-600) / 0.5);
+  min-height: 4rem;
 }
 
 header {
-  z-index: 1;
+  z-index: 3;
   position: relative;
 }
 
@@ -149,6 +150,7 @@ header {
 }
 .search-bar input {
   border: none;
+  width: 100%;
 }
 
 .search-bar input:focus {
@@ -175,4 +177,44 @@ header {
 
 .clr-black {
   color: hsl(var(--clr-gray-600));
+}
+
+.categories {
+  position: relative;
+  align-self: stretch;
+}
+
+.categories > p {
+  cursor: pointer;
+  height: 100%;
+  margin-top: 1.25rem;
+}
+
+.categories:has(p:hover) .categories-panel,
+.categories-panel:hover {
+  display: flex;
+}
+
+.categories-panel {
+  min-width: 15rem;
+  min-height: 35rem;
+  background-color: hsl(var(--clr-white));
+  position: absolute;
+  inset: 4.25rem 0rem;
+  display: none;
+  padding: 1rem;
+  flex-direction: column;
+  box-shadow: 0 0 1rem -0.5rem hsl(var(--clr-gray-600) / 0.5);
+  z-index: 2;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.category img {
+  width: 1.5rem;
 }
