@@ -1,6 +1,6 @@
 :root {
-  --clr-purple: #5624d0;
-  --clr-white: #fff;
+  --clr-purple: 257 70% 48%;
+  --clr-white: 0 0% 100%;
   --clr-gray-600: 210 6% 7%;
 }
 
@@ -20,7 +20,6 @@ svg,
 img {
   display: block;
   max-width: 100%;
-  max-height: 100%;
 }
 
 h1,
@@ -37,16 +36,18 @@ a {
   text-decoration: none;
 }
 
-header {
-  background-color: var(--clr-purple);
+.image-contain {
+  object-fit: contain;
+  object-position: center;
 }
 
 .skill-up-banar p {
-  color: var(--clr-white);
+  color: hsl(var(--clr-white));
   text-align: center;
 }
 
 .skill-up-banar {
+  background-color: hsl(var(--clr-purple));
   max-height: 4rem;
   padding: 1rem;
   display: flex;
@@ -69,10 +70,19 @@ header {
 
 .carousel-main {
   position: relative;
+  overflow: hidden;
+}
+
+.carousel-1 {
+  transition: transform 1s;
+}
+
+main:has(.carousel-btn:hover) .carousel-1 {
+  transform: translateX(100%);
 }
 
 .text-section {
-  background-color: var(--clr-white);
+  background-color: hsl(var(--clr-white));
   position: absolute;
   top: 4rem;
   left: 5rem;
@@ -97,9 +107,72 @@ header {
   margin-left: var(--margin);
   transform: translateY(-50%);
   cursor: pointer;
+  z-index: 2;
 }
 
 .align-right {
   right: 0;
   margin-right: var(--margin);
+}
+
+nav {
+  display: flex;
+  box-shadow: 0rem 0.5rem 1rem -0.5rem hsl(var(--clr-gray-600) / 0.5);
+  padding: 1rem 1.5rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+header {
+  z-index: 1;
+  position: relative;
+}
+
+.flex {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.logo {
+  width: 6rem;
+}
+.magnifying-glass {
+  width: 2rem;
+}
+
+.search-bar {
+  border: solid 1px;
+  border-radius: 2rem;
+  padding-inline: 0.5rem;
+  padding-block: 0.5rem;
+  flex: 2;
+}
+.search-bar input {
+  border: none;
+}
+
+.search-bar input:focus {
+  outline: 0px;
+}
+
+.button {
+  padding: 0.75rem 1rem;
+  outline: none;
+  border: solid 1px;
+  cursor: pointer;
+}
+
+.bg-clr-white {
+  background: hsl(var(--clr-white));
+}
+
+.clr-white {
+  color: hsl(var(--clr-white));
+}
+.bg-clr-black {
+  background: hsl(var(--clr-gray-600));
+}
+
+.clr-black {
+  color: hsl(var(--clr-gray-600));
 }
