@@ -41,13 +41,13 @@ function fillSubCategories(category) {
   subCategoriesColumn.innerHTML = innerHTML;
 }
 
-categoriesColumn.addEventListener("mouseover", () => {
+categoriesColumn.addEventListener("mouseover", (event) => {
   for (let i = 0; i < categoriesColumn.children.length; i++) {
     if (categoriesColumn.children[i].matches(":hover")) {
       const currentCategoryHovered =
         categoriesColumn.children[i].children[0].textContent;
 
-      if (lastCategoryHovered !== categoriesColumn.children[i]) {
+      if (lastCategoryHovered !== currentCategoryHovered) {
         categoriesColumn.children[i].classList.add("hovered");
 
         for (let j = 0; j < categoriesColumn.children.length; j++) {

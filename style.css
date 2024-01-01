@@ -3,6 +3,7 @@
   --clr-white: 0 0% 100%;
   --clr-gray-600: 210 6% 7%;
   --clr-gray-150: 206 15% 91%;
+  --clr-gray-100: 200 23% 97%;
 }
 
 /* Reset  */
@@ -240,4 +241,27 @@ header {
 
 .category img {
   width: 1.5rem;
+}
+
+.trusted-companies {
+  margin-block: 3rem;
+  text-align: center;
+  background-color: hsl(var(--clr-gray-100));
+  padding: 0rem 10rem;
+  min-height: 15rem;
+  display: grid;
+  align-content: center;
+  gap: 1rem;
+}
+
+.companies {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  place-items: center;
+}
+
+@media (max-width: 61.25rem) {
+  .companies {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
