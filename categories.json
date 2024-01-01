@@ -1,0 +1,90 @@
+{
+  "Development": [
+    "Web Development",
+    "Data Science",
+    "Mobile Development",
+    "Programming Languages",
+    "Game Development",
+    "Software Testing"
+  ],
+  "Business": [
+    "Enterpreneurship",
+    "Communication",
+    "Managment",
+    "Sales",
+    "Business Strategy",
+    "Operations"
+  ],
+  "Finance & Accounting": [
+    "Accounting & Bookkeeping",
+    "Complince",
+    "Cryptocurrency & Blockchain",
+    "Economics",
+    "Finance",
+    "Finance Cert&Exam Prep"
+  ],
+  "IT & Software": [
+    "IT Certifications",
+    "Network & Security",
+    "Hardware",
+    "Operating Systems & Services",
+    "Other IT & Software"
+  ],
+  "Office Productivity": [
+    "Web Development",
+    "Data Science",
+    "Mobile Development",
+    "Programming Languages",
+    "Game Development",
+    "Software Testing"
+  ],
+  "Personal Development": [
+    "Enterpreneurship",
+    "Communication",
+    "Managment",
+    "Sales",
+    "Business Strategy",
+    "Operations"
+  ],
+  "Design": [
+    "Accounting & Bookkeeping",
+    "Complince",
+    "Cryptocurrency & Blockchain",
+    "Economics",
+    "Finance",
+    "Finance Cert&Exam Prep"
+  ],
+  "Marketing": [
+    "IT Certifications",
+    "Network & Security",
+    "Hardware",
+    "Operating Systems & Services",
+    "Other IT & Software"
+  ],
+  "Lifestyle": [
+    "Web Development",
+    "Data Science",
+    "Mobile Development",
+    "Programming Languages",
+    "Game Development",
+    "Software Testing"
+  ],
+  "Photography & Video": [
+    "Enterpreneurship",
+    "Communication",
+    "Managment",
+    "Sales",
+    "Business Strategy",
+    "Operations"
+  ],
+  "Health & Fitness": [
+    "Accounting & Bookkeeping",
+    "Complince",
+    "Cryptocurrency & Blockchain",
+    "Economics",
+    "Finance",
+    "Finance Cert&Exam Prep"
+  ],
+  "Music": ["", "", "", "", "", ""],
+  "Teaching & Academics": ["", "", "", "", "", ""]
+}
