@@ -24,7 +24,7 @@ function fillCategories(data) {
   for (const key in data) {
     innerHTML += `<div class="category">
     <p>${key}</p>
-    <i class="fa-solid fa-angle-right"></i>
+    <i class="fa fa-angle-right"></i>
     </div>`;
   }
   categoriesColumn.innerHTML = innerHTML;
@@ -35,7 +35,7 @@ function fillSubCategories(category) {
   for (subCategory of jsonData[category]) {
     innerHTML += `<div class="category">
     <p>${subCategory}</p>
-    <i class="fa-solid fa-angle-right"></i>
+    <i class="fa fa-angle-right"></i>
     </div>`;
   }
   subCategoriesColumn.innerHTML = innerHTML;
