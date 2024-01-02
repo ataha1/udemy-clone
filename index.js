@@ -65,3 +65,53 @@ categoriesColumn.addEventListener("mouseover", (event) => {
     }
   }
 });
+
+//carousel courses section
+const coursesList = document.querySelector(".selection-of-courses ul");
+const courses = document.querySelector(".courses");
+const exploreButton = document.querySelector(".course-tab-details button");
+let coursesDataJSON;
+
+fetch("./data-courses.json")
+  .then((response) => response.json())
+  .then((data) => {
+    coursesDataJSON = data;
+    handleCourses(data);
+  });
+
+function handleCourses(data) {
+  let innerHTML = "";
+  for (key in data) {
+    innerHTML += `<a><li>${key}</li></a>`;
+  }
+  coursesList.innerHTML = innerHTML;
+  for (child of coursesList.children) {
+    child.addEventListener("click", function () {
+      displayCourses(this.children[0].textContent);
+    });
+  }
+  displayCourses(Object.keys(data)[0]);
+  coursesList.children[0].classList.add("active");
+}
+
+function displayCourses(category) {
+  const coursesData = coursesDataJSON[category];
+  let innerHTML = "";
+  for (const course of coursesData) {
+    innerHTML += `<div class="card">
+          <img
+            src="${course["image-link"]}"
+            alt=""
+          />
+          <h3 class="title">
+            ${course["title"]}
+          </h3>
+          <p class="instructors">${course["instructors"]}</p>
+          <div class="rating">${course["rating"]}</div>
+          <h2 class="price">${course["price"]}</h2>
+        </div>`;
+  }
+  courses.innerHTML = innerHTML;
+
+  exploreButton.textContent = "Explore " + category;
+}
