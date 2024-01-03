@@ -112,6 +112,24 @@ function displayCourses(category) {
         </div>`;
   }
   courses.innerHTML = innerHTML;
-
+  for (const courseCategory of coursesList.children) {
+    courseCategory.classList.remove("active");
+    if (category === courseCategory.children[0].textContent) {
+      courseCategory.classList.add("active");
+    }
+  }
+  coursesSlider.scrollLeft = 0;
   exploreButton.textContent = "Explore " + category;
 }
+
+// carousel slider section
+const coursesSlider = document.querySelector(".courses");
+const sliderButtons = document.querySelectorAll(".btn-slider");
+
+sliderButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const cardWidth = document.querySelector(".card").offsetWidth;
+    console.log(btn.id);
+    courses.scrollLeft += btn.id === "left" ? -cardWidth : cardWidth;
+  });
+});
