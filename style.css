@@ -6,6 +6,10 @@
   --clr-gray-100: 200 23% 97%;
   --clr-gray-300: 207 4% 43%;
   --clr-gray-400: 204, 4%, 25%;
+
+  --fs-400: 1rem;
+  --fs-500: 1.25rem;
+  --fs-600: 2rem;
 }
 
 /* Reset  */
@@ -40,10 +44,17 @@ a {
   text-decoration: none;
 }
 
+body {
+  font: inherit;
+}
+
 .image-contain {
   object-fit: contain;
   object-position: center;
 }
+/* ------------------ */
+/* Navigation menu    */
+/* ------------------ */
 
 .skill-up-banar p {
   color: hsl(var(--clr-white));
@@ -142,13 +153,33 @@ header {
   position: relative;
 }
 
+.logo {
+  width: 6rem;
+}
+
 .flex {
   display: flex;
   gap: 0.5rem;
+  align-items: center;
+}
+.lang {
+  border: solid 1px hsl(var(--clr-gray-600));
+  padding: 0.65rem;
+  text-align: center;
+}
+.pointer {
+  cursor: pointer;
+}
+@media (max-width: 1080px) {
+  .udemy-business {
+    display: none;
+  }
 }
 
-.logo {
-  width: 6rem;
+@media (max-width: 920px) {
+  .teach-on-udemy {
+    display: none;
+  }
 }
 .magnifying-glass {
   width: 2rem;
@@ -197,6 +228,10 @@ header {
   align-self: stretch;
 }
 
+.hover-purple:hover {
+  color: hsl(var(--clr-purple));
+}
+
 .categories > p {
   cursor: pointer;
   height: 100%;
@@ -209,6 +244,7 @@ header {
 }
 
 .categories-panel {
+  color: hsl(var(--clr-gray-600));
   min-width: 30rem;
   min-height: 38rem;
   background-color: hsl(var(--clr-white));
@@ -258,7 +294,7 @@ header {
   margin-block: 3rem;
   text-align: center;
   background-color: hsl(var(--clr-gray-100));
-  padding: 0rem 10rem;
+  padding: 0rem min(10rem, 8vw);
   min-height: 15rem;
   display: grid;
   align-content: center;
@@ -361,6 +397,18 @@ header {
 
 .card > * + * {
   margin-top: 0.25rem;
+}
+
+h3 {
+  font-size: var(--fs-400);
+}
+
+h2 {
+  font-size: var(--fs-500);
+}
+
+h1 {
+  font-size: var(--fs-600);
 }
 
 .title {
